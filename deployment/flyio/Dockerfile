@@ -4,6 +4,8 @@ WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
+# Use Fly.io specific frontend env
+COPY deployment/flyio/frontend.env .env.production
 RUN npm run build
 
 # Stage 2: Build backend
@@ -27,10 +29,10 @@ COPY --from=backend-builder /app/backend/node_modules /app/backend/node_modules
 COPY --from=backend-builder /app/backend/package.json /app/backend/
 
 # Nginx config (adjust port to 8080 for Fly.io)
-COPY nginx.flyio.conf /etc/nginx/http.d/default.conf
+COPY deployment/flyio/nginx.conf /etc/nginx/http.d/default.conf
 
 # Supervisor config
-COPY supervisord.conf /etc/supervisord.conf
+COPY deployment/flyio/supervisord.conf /etc/supervisord.conf
 
 # Create nginx directories
 RUN mkdir -p /run/nginx /var/log/nginx
