@@ -40,6 +40,9 @@ export const BaseSelect = styled.select`
   padding: 4px 8px;
   cursor: pointer;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 `;
 
 export const WidgetBody = styled.div`
