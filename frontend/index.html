@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinanceHub - Global Currency Exchange Rates</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      background: #fff;
+      padding: 20px 32px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    header { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 800; color: #2563eb; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: #64748b; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #2563eb; }
+    main { max-width: 1200px; margin: 0 auto; padding: 48px 24px; flex: 1; }
+    h1 { font-size: 42px; text-align: center; margin-bottom: 48px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .card { background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .card h2 { margin-bottom: 16px; }
+    .card p { color: #475569; line-height: 1.7; margin-bottom: 12px; }
+    footer { text-align: center; color: #94a3b8; font-size: 13px; }
+    footer a { color: #2563eb; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } nav { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">💰 FinanceHub</div>
+  <nav>
+    <a href="#rates">Rates</a>
+    <a href="#markets">Markets</a>
+    <a href="#tools">Tools</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Global Currency Exchange Rates</h1>
+  <div class="grid">
+    <div class="card">
+      <h2>📊 Market Overview</h2>
+      <p>Today's currency markets show moderate volatility as central banks adjust monetary policies. The US Dollar remains strong against most major currencies.</p>
+      <p>Track live exchange rates for 10 major currencies and make informed financial decisions.</p>
+    </div>
+    <div class="card">
+      <h2>🌍 Currency Tools</h2>
+      <p>Understanding exchange rates is crucial for international business, travel, and investment. Our platform provides accurate, real-time information.</p>
+      <p>Click the widget button in the bottom-right corner to view current rates.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p><strong>FinanceHub</strong> - Demo Site for Testing Purposes</p>
+</footer>
+
+<script type="module" src="/src/index.ts"></script>
+<script type="module">
+  window.CurrencyWidget.init({
+    baseCurrency: 'EUR',
+  });
+</script>
+</body>
+</html>

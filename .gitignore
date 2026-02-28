@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.production
+.env.local
+.env.*.local
+
+# Local npm config (may contain private registry URLs)
+.npmrc
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# TypeScript
+*.tsbuildinfo

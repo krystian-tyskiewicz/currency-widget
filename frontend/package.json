@@ -1,0 +1,26 @@
+{
+  "name": "currency-widget-frontend",
+  "version": "1.0.0",
+  "description": "Currency Widget - embeddable React widget",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.3.11"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@types/styled-components": "^5.1.36",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}
