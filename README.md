@@ -2,6 +2,8 @@
 
 Embeddable currency exchange rate widget with real-time data. Built with React, NestJS, and Shadow DOM for complete style isolation.
 
+🚀 **[Live Demo](https://currency-widget.fly.dev)**
+
 ## Features
 
 - 🎨 Floating button UI with dialog
